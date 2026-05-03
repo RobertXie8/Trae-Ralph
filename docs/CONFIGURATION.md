@@ -33,6 +33,7 @@ npm run config
 ```
 
 **路径说明：**
+
 - Windows: `C:\Users\<用户名>\.trae-ralph\config.json`
 - Mac: `/Users/<用户名>/.trae-ralph/config.json`
 - Linux: `/home/<用户名>/.trae-ralph/config.json`
@@ -64,18 +65,21 @@ npm run config
 
 ### 配置项说明
 
-| 字段 | 说明 | 默认值 |
-|------|------|--------|
-| `trae.international` | 国际版配置 | - |
-| `trae.china` | 国内版配置 | - |
-| `path` | Trae 可执行文件路径 | - |
-| `port` | CDP 调试端口 | 国际版 9222，国内版 9223 |
-| `checkInterval` | 检查间隔（毫秒） | 5000 |
-| `stableCount` | 稳定计数 | 3 |
-| `startupDelay` | 启动延迟（毫秒） | 5000 |
-| `defaultVersion` | 默认启动版本 | international |
+
+| 字段                   | 说明           | 默认值               |
+| -------------------- | ------------ | ----------------- |
+| `trae.international` | 国际版配置        | -                 |
+| `trae.china`         | 国内版配置        | -                 |
+| `path`               | Trae 可执行文件路径 | -                 |
+| `port`               | CDP 调试端口     | 国际版 9222，国内版 9223 |
+| `checkInterval`      | 检查间隔（毫秒）     | 5000              |
+| `stableCount`        | 稳定计数         | 3                 |
+| `startupDelay`       | 启动延迟（毫秒）     | 5000              |
+| `defaultVersion`     | 默认启动版本       | international     |
+
 
 **重要：** 
+
 - 至少需要配置一个版本
 - 两个版本使用不同端口，可以同时运行
 
@@ -97,18 +101,21 @@ npm run config:cn
 ### 平台示例
 
 **Windows:**
+
 ```bash
 npm run config -- --trae-path "C:\Program Files\Trae\Trae.exe"
 npm run config -- --cn --trae-path "C:\Program Files\Trae CN\Trae CN.exe"
 ```
 
 **macOS:**
+
 ```bash
 npm run config -- --trae-path "/Applications/Trae.app/Contents/MacOS/Trae"
 npm run config -- --cn --trae-path "/Applications/Trae CN.app/Contents/MacOS/Trae CN"
 ```
 
 **Linux:**
+
 ```bash
 npm run config -- --trae-path "/usr/bin/trae"
 npm run config -- --cn --trae-path "/usr/bin/trae-cn"
@@ -126,11 +133,13 @@ npm run config -- --cn --trae-path "/usr/bin/trae-cn"
 ### Windows
 
 **国际版：**
+
 - `C:\Program Files\Trae\Trae.exe`
 - `C:\Program Files (x86)\Trae\Trae.exe`
 - `%LOCALAPPDATA%\Programs\Trae\Trae.exe`
 
 **国内版：**
+
 - `C:\Program Files\Trae CN\Trae CN.exe`
 - `C:\Program Files (x86)\Trae CN\Trae CN.exe`
 - `D:\Program Files\Trae CN\Trae CN.exe`
@@ -138,19 +147,23 @@ npm run config -- --cn --trae-path "/usr/bin/trae-cn"
 ### macOS
 
 **国际版：**
+
 - `/Applications/Trae.app/Contents/MacOS/Trae`
 
 **国内版：**
+
 - `/Applications/Trae CN.app/Contents/MacOS/Trae CN`
 
 ### Linux
 
 **国际版：**
+
 - `/usr/bin/trae`
 - `/usr/local/bin/trae`
 - `/opt/trae/trae`
 
 **国内版：**
+
 - `/usr/bin/trae-cn`
 - `/usr/local/bin/trae-cn`
 - `/opt/trae-cn/trae-cn`
@@ -222,6 +235,7 @@ npm run start:cn
 如果你的配置文件是旧格式（字符串路径），建议更新为新格式：
 
 **旧格式：**
+
 ```json
 {
   "trae": {
@@ -232,6 +246,7 @@ npm run start:cn
 ```
 
 **新格式：**
+
 ```json
 {
   "trae": {
@@ -271,6 +286,7 @@ npm run config -- --trae-path "正确的路径"
 ### 端口冲突
 
 确保国际版和国内版使用不同端口：
+
 - 国际版：9222
 - 国内版：9223
 

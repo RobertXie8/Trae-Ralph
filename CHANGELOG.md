@@ -28,23 +28,27 @@
 ### 新增功能
 
 #### 快速配置命令
+
 - 添加命令行参数支持，实现一条命令完成配置
 - 支持 `npm run config -- --trae-path "路径"` 快速配置国际版
 - 支持 `npm run config -- --cn --trae-path "路径"` 快速配置国内版
 - 添加 `npm run config:cn` 快捷命令用于交互式配置国内版
 
 #### 多版本独立端口配置
+
 - 国际版和国内版现在使用独立端口（9222 和 9223）
 - 支持同时运行两个版本而不冲突
 - 每个版本有独立的配置对象（path, port, checkInterval 等）
 
 #### 配置文件增强
+
 - 配置文件移至用户主目录 `~/.trae-ralph/config.json`
 - 支持嵌套对象配置格式
 - 向后兼容旧的字符串路径格式
 - 自动清理旧格式的顶层配置字段
 
 #### 注入器增强
+
 - `injector.js` 现在支持版本参数
 - 添加 `npm run inject:cn` 命令用于国内版注入
 - 自动读取对应版本的端口配置
@@ -52,12 +56,14 @@
 ### 改进
 
 #### 配置系统
+
 - 快速配置保留现有配置，只更新指定版本
 - 自动验证路径是否存在
 - 更友好的错误提示和使用说明
 - 支持脚本自动化配置
 
 #### 文档
+
 - 新增 `docs/QUICK-CONFIG-GUIDE.md` - 快速配置详细指南
 - 新增 `docs/CONFIG-MIGRATION.md` - 配置迁移指南
 - 更新 `COMMANDS.md` 添加快速配置示例
@@ -65,6 +71,7 @@
 - 更新 `docs/MULTI-VERSION.md` 反映新的配置格式
 
 #### 命令
+
 - `package.json` 添加 `config:cn` 脚本
 - `package.json` 添加 `inject:cn` 脚本
 - 所有命令现在支持版本参数

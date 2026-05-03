@@ -9,16 +9,19 @@
 ## 设计理念
 
 ### 1. 统一接口
+
 - 提供标准化的 API 接口，屏蔽底层实现细节
 - 支持多种选择器策略，提高兼容性
 - 统一的错误处理和状态管理
 
 ### 2. 非侵入式
+
 - 不修改 Trae IDE 的核心代码
 - 通过 CDP 协议进行远程操作
 - 支持热插拔和动态注入
 
 ### 3. 可扩展性
+
 - 模块化设计，易于添加新功能
 - 支持自定义选择器和操作
 - 插件化架构，便于集成第三方功能
@@ -26,6 +29,7 @@
 ## 核心功能模块
 
 ### 1. 元素选择器 (Selectors)
+
 ```javascript
 chat: {
   root: ['.split-view-view'],
@@ -79,6 +83,7 @@ runCommandCard: {
 ### 2. 基础操作 API
 
 #### 读取操作
+
 - `getElement(selector)` - 获取元素
 - `getText(element)` - 获取元素文本
 - `getValue(element)` - 获取输入框值
@@ -87,11 +92,13 @@ runCommandCard: {
 - `isEnabled(element)` - 检查元素是否可用
 
 #### 写入操作
+
 - `setValue(element, value)` - 设置输入框值
 - `setText(element, text)` - 设置元素文本
 - `setAttribute(element, attr, value)` - 设置元素属性
 
 #### 交互操作
+
 - `click(element)` - 点击元素
 - `focus(element)` - 聚焦元素
 - `blur(element)` - 失焦元素
@@ -101,6 +108,7 @@ runCommandCard: {
 ### 3. 高级操作 API
 
 #### 聊天操作
+
 - `sendMessage(text)` - 发送聊天消息（支持 Lexical 编辑器，自动处理焦点和状态同步）
 - `handleConfirmations()` - 处理交互确认（自动点击删除文件卡片和二次确认弹窗）
 - `getLastMessage()` - 获取最后一条消息
@@ -108,6 +116,7 @@ runCommandCard: {
 - `checkConversationStatus()` - 检查对话状态
 
 #### 编辑器操作
+
 - `openFile(path)` - 打开文件
 - `saveFile()` - 保存文件
 - `getCurrentFile()` - 获取当前文件
@@ -115,6 +124,7 @@ runCommandCard: {
 - `setCursorPosition(line, column)` - 设置光标位置
 
 #### 状态监控
+
 - `monitorLoading()` - 监控加载状态
 - `detectErrors()` - 检测错误信息
 - `checkConnection()` - 检查连接状态
@@ -122,6 +132,7 @@ runCommandCard: {
 ## 使用示例
 
 ### 基础用法
+
 ```javascript
 const editorAPI = require('./src/editor-api');
 
@@ -137,6 +148,7 @@ console.log('AI 回复:', lastMessage);
 ```
 
 ### 高级用法
+
 ```javascript
 // 监控对话状态
 const monitor = editorAPI.status.monitorConversation();
@@ -157,6 +169,7 @@ await editorAPI.editor.saveFile();
 ## 错误处理
 
 ### 异常类型
+
 - `ElementNotFoundError` - 元素未找到
 - `ElementNotVisibleError` - 元素不可见
 - `ElementNotEnabledError` - 元素不可用
@@ -164,6 +177,7 @@ await editorAPI.editor.saveFile();
 - `ConnectionError` - 连接错误
 
 ### 错误处理示例
+
 ```javascript
 try {
   await editorAPI.chat.sendMessage('Hello');
@@ -179,6 +193,7 @@ try {
 ## 配置选项
 
 ### 基础配置
+
 ```javascript
 const config = {
   // 选择器配置
@@ -205,6 +220,7 @@ const config = {
 ```
 
 ### 环境配置
+
 ```javascript
 // 开发环境
 const devConfig = {
@@ -228,6 +244,7 @@ const prodConfig = {
 ## 集成指南
 
 ### 与现有系统集成
+
 ```javascript
 const { RalphLoop } = require('./src/ralph-loop');
 const { EditorAPI } = require('./src/editor-api');
@@ -253,6 +270,7 @@ class EnhancedRalph extends RalphLoop {
 ```
 
 ### 自定义扩展
+
 ```javascript
 // 自定义聊天操作
 class CustomChatAPI extends ChatAPI {
@@ -283,6 +301,7 @@ class CustomStatusMonitor extends StatusMonitor {
 ## 开发指南
 
 ### 添加新操作
+
 1. 在相应的模块文件中定义新方法
 2. 添加对应的选择器配置
 3. 实现错误处理逻辑
@@ -290,6 +309,7 @@ class CustomStatusMonitor extends StatusMonitor {
 5. 更新文档
 
 ### 测试新功能
+
 ```javascript
 // 测试新操作
 const testAPI = async () => {
@@ -308,23 +328,27 @@ const testAPI = async () => {
 ## 版本兼容性
 
 ### Trae IDE 版本支持
+
 - ✅ Trae IDE 国际版
 - ✅ Trae IDE 国内版
 - ✅ 未来版本（通过选择器适配）
 
 ### Node.js 版本要求
+
 - Node.js >= 14.0.0
 - 支持 ES6+ 语法特性
 
 ## 贡献指南
 
 ### 代码规范
+
 - 使用 JavaScript Standard Style
 - 添加 JSDoc 注释
 - 编写单元测试
 - 更新相关文档
 
 ### 提交规范
+
 - 遵循 Conventional Commits 规范
 - 提交前运行测试
 - 更新 CHANGELOG.md
@@ -336,8 +360,9 @@ MIT License - 详见 [LICENSE](../LICENSE) 文件
 ## 支持与反馈
 
 如有问题或建议，请通过以下方式联系：
+
 - GitHub Issues: [项目 Issues 页面](https://github.com/your-username/trae-ralph/issues)
-- 邮箱: yhuiche@gmail.com
+- 邮箱: [yhuiche@gmail.com](mailto:yhuiche@gmail.com)
 
 ---
 
@@ -355,4 +380,3 @@ MIT License - 详见 [LICENSE](../LICENSE) 文件
 - `editor-ops.js`: `EditorOps` 类，封装编辑器文件操作。
 
 如需修改选择器，请直接修改 `selectors.js` 或在初始化时传入覆盖配置。
-

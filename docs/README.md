@@ -3,7 +3,9 @@
 ## 📚 核心文档
 
 ### [配置指南](CONFIGURATION.md)
+
 完整的配置说明，包括：
+
 - 快速配置和交互式配置
 - 配置文件格式和位置
 - 多版本支持（国际版/国内版）
@@ -12,7 +14,9 @@
 - 故障排除
 
 ### [场景系统指南](SCENARIOS-GUIDE.md)
+
 场景检测和管理，包括：
+
 - 内置场景说明
 - 创建和管理自定义场景
 - 场景配置详解
@@ -21,7 +25,9 @@
 - 调试和故障排除
 
 ### [元素选择器](SELECTORS.md)
+
 DOM 元素定位，包括：
+
 - 选择器定义和使用
 - 可用元素类别
 - 浏览器控制台使用
@@ -30,33 +36,41 @@ DOM 元素定位，包括：
 ## 📖 快速参考
 
 ### [快速开始](../README.md#快速开始)
+
 查看 README.md 的快速开始部分
 
 ### [常用命令](../README.md#常用命令)
+
 查看 README.md 的命令列表
 
 ### [更新日志](../CHANGELOG.md)
+
 版本更新记录
 
 ## 🎯 按需查阅
 
 ### 首次使用
+
 1. [README.md](../README.md) - 快速开始
 2. [配置指南](CONFIGURATION.md) - 详细配置
 
 ### 配置 Trae
+
 1. [配置指南](CONFIGURATION.md) - 完整配置说明
 2. [README.md](../README.md#常用命令) - 快速配置命令
 
 ### 使用场景系统
+
 1. [README.md](../README.md#场景系统) - 快速了解
 2. [场景系统指南](SCENARIOS-GUIDE.md) - 详细说明
 
 ### 自定义和扩展
+
 1. [场景系统指南](SCENARIOS-GUIDE.md) - 创建自定义场景
 2. [元素选择器](SELECTORS.md) - 使用 DOM 选择器
 
 ### 故障排除
+
 1. [配置指南](CONFIGURATION.md) - 配置问题
 2. [场景系统指南](SCENARIOS-GUIDE.md) - 场景问题
 3. [README.md](../README.md#故障排除) - 常见问题

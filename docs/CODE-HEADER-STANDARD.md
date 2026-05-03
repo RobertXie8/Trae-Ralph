@@ -99,6 +99,7 @@
 ## 已添加头部的文件
 
 ### src/
+
 - ✅ config.js
 - ✅ launcher.js
 - ✅ injector.js
@@ -109,9 +110,11 @@
 - ⏳ scenario-config.js
 
 ### scenarios/
+
 - ✅ loader.js
 
 ### scenarios/builtin/
+
 - ✅ context-limit.js
 - ⏳ rate-limit.js
 - ⏳ interactive-command.js
@@ -120,9 +123,11 @@
 - ⏳ long-thinking.js
 
 ### src/editor-api/
+
 - ✅ selectors.js
 
 ### bin/
+
 - ✅ cli.js
 
 ## 待添加头部的文件
